@@ -1,0 +1,20 @@
+# Виртуальное окружение
+venv/
+.venv/
+
+# Секреты и локальные настройки
+.env
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Статика и локальные БД
+static/
+staticfiles/
+db.sqlite3
+
+# Настройки IDE
+.idea/
+.vscode/
