@@ -49,3 +49,11 @@ jobs:
 
       - name: Запуск автотестов
         run: python manage.py test
+      - name: Деплой на сервер
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            /home/deploy/django_cicd/deploy.sh
